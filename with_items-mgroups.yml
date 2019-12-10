@@ -1,0 +1,15 @@
+---
+ - hosts: [dev]
+   user: root
+   tasks:
+   - name: create groups
+     group: name=groups state=present
+   - name: create 4 groups
+     group:
+       name: "{{ item.name }}"
+       gid: "{{ item.gid }}"
+     with_items:
+      - {name: 'priya', gid: 'gid=655'}
+      - {name: 'hasini', gid: 'gid=660'}
+      - {name: 'cuty', gid: 'gid=670'}
+      - {name: 'chandu', gid: 'gid=680'}

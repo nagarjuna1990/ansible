@@ -1,0 +1,8 @@
+---
+ - hosts: 54.242.211.51 
+   user: root
+   tasks:
+   - name: install apache2
+     yum: name=apache2  state=installed
+   - name: restart apache2
+     service: name=httpd state=restarted

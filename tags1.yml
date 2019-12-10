@@ -1,0 +1,22 @@
+---
+- hosts: [dev]
+  user: root
+  tasks:
+  - name: install httpd
+    yum: name=httpd state=installed
+    tags:
+    - install-httpd
+  - name: install vsftpd
+    yum: name=vsftpd state=installed
+    tags:
+    - install-vsftpd
+  - name: copy index.html
+    copy: src=files/index.html dest=/var/www/html/index.html
+    tags:
+    - copy-index
+  - name: restart httpd
+    service: name=httpd state=restarted
+    tags:
+    - restarted-httpd
+ 
+

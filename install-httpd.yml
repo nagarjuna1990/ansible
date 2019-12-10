@@ -1,0 +1,14 @@
+---
+ - hosts: 54.242.211.51 
+   user: root
+   tasks:
+   - name: install httpd
+     package: name=httpd state=installed
+   - name: install vsftpd
+     package: name=vsftpd state=installed
+   - name: install git
+     package: name=git state=installed
+   - name: install subversion
+     package: name=subversion state=installed
+   - name: install apache
+     package: name=apache state=installed

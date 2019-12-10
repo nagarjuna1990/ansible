@@ -1,0 +1,8 @@
+---
+ - hosts: 54.242.211.51
+   user: root
+   tasks:
+   - name: create info
+     file:
+      path: /capital/info
+      state: directory

@@ -1,0 +1,10 @@
+---
+ - hosts: 54.242.211.51
+   user: root
+   tasks:
+   - name: create test-file1
+     file: path="{{ item }}" state=directory
+     with_items:
+     - '/test/test-priya'
+     - '/test/test-lakshmi'
+     - '/test/test-uday'

@@ -1,0 +1,6 @@
+---
+ - hosts: 54.242.211.51
+   user: root
+   tasks:
+    - name: copy testfile.txt
+      copy: src=/test/testfile.txt dest=/saggurthi/testfile.txt
