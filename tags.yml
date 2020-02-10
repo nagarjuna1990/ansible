@@ -1,8 +1,0 @@
----
- - hosts: [dev]
-   user: root
-   tasks:
-   - name: copy index.html
-     copy: src=files/index.html dest=/var/www/html/index.html
-   - name: restart httpd
-     service: name=httpd state=restarted
